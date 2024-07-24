@@ -19,7 +19,7 @@ const SignUp = () => {
 	};
 
 	const handleSubmit = async (e) => {
-		e.preventDefault(); //To prevent refreshing the page.
+		e.preventDefault(); 
 		await signup(inputs);
 	};
 

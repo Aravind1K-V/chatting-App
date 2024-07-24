@@ -9,10 +9,9 @@ const useAuthStore = create(
       clearAuthUser: () => set({ authUser: null })
     }),
     {
-      name: 'chat-user', // name of the item in the storage (must be unique)
-      getStorage: () => localStorage, // (optional) by default, 'localStorage' is used
+      name: 'chat-user', 
+      getStorage: () => localStorage, 
       onRehydrateStorage: () => (state) => {
-        // optional
         state?.authUser && console.log('Rehydrated state:', state.authUser);
       }
     }
